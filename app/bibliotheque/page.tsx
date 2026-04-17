@@ -292,7 +292,7 @@ export default function PageBibliotheque() {
       )}
 
       {/* Hero */}
-      <section style={{ background: '#1A0000', padding: 'clamp(40px,6vw,80px) clamp(20px,5vw,48px)' }}>
+      <section style={{ background: `linear-gradient(135deg, #0D1B2A, ${PRIMAIRE})`, padding: 'clamp(40px,6vw,80px) clamp(20px,5vw,48px)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ width: 48, height: 2, background: OR, margin: '0 auto 20px' }} />
           <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(28px,4vw,52px)', color: 'white', margin: '0 0 14px', fontWeight: 'normal' }}>
