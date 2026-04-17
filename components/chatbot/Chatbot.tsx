@@ -25,14 +25,9 @@ const ACCUEIL: Record<string, Record<string, string>> = {
     en: "Hello! I'm the LexHaiti AI assistant. I can help with Haitian law, legal debates and your courses.",
   },
   techpro: {
-    fr: "Bonjour ! Je suis l'assistant IA de TechPro Haiti. Je peux vous aider sur vos formations professionnelles, les réglementations BRH et MonCash. Comment puis-je vous aider ?",
-    ht: "Bonjou ! Mwen se asistan IA TechPro Haiti a. Mwen ka ede ou ak fòmasyon pwofesyonèl yo ak règleman BRH yo.",
-    en: "Hello! I'm TechPro Haiti's AI assistant. I can help with professional training, BRH regulations and MonCash.",
-  },
-  techpro: {
-    fr: "Bonjour ! Je suis l'assistant IA de TechPro Haiti. Je peux vous aider sur les soins infirmiers, les projets pratiques et vos formations IT. Comment puis-je vous aider ?",
-    ht: "Bonjou ! Mwen se asistan IA TechPro Haiti a. Mwen ka ede ou ak pwotokòl klinik yo ak fòmasyon medikal yo.",
-    en: "Hello! I'm TechPro Haiti's AI assistant. I can help with nursing care, clinical protocols and medical training.",
+    fr: "Bonjour ! Je suis l'assistant IA de TechPro Haiti. Je vous aide avec le développement web, la cybersécurité, le cloud et vos formations IT. Comment puis-je vous aider ?",
+    ht: "Bonjou ! Mwen se asistan IA TechPro Haiti a. Mwen ka ede ou ak devlopman web, cybersecurity ak fòmasyon IT yo.",
+    en: "Hello! I'm TechPro Haiti's AI assistant. I can help with web development, cybersecurity, cloud and IT training.",
   },
 };
 
@@ -43,14 +38,9 @@ const SUGGESTIONS: Record<string, Record<string, string[]>> = {
     en: ["How to consult the Haitian Civil Code?", "How to prepare a legal argument?", "How to access the courses?"],
   },
   techpro: {
-    fr: ["Comment obtenir une certification BRH ?", "Comment utiliser MonCash professionnellement ?", "Comment progresser dans ma carrière bancaire ?", "Quelles formations sont disponibles ?"],
-    ht: ["Kijan pou jwenn sètifikasyon BRH ?", "Kijan pou itilize MonCash nan travay ?", "Ki fòmasyon ki disponib ?"],
-    en: ["How to get BRH certification?", "How to use MonCash professionally?", "What courses are available?"],
-  },
-  techpro: {
-    fr: ["Quels sont les protocoles OMS pour Haïti ?", "Comment préparer l'examen d'état infirmier ?", "Quels soins pour un patient diabétique ?", "Comment accéder à la bibliothèque médicale ?"],
-    ht: ["Ki pwotokòl OMS pou Ayiti ?", "Kijan pou prepare egzamen leta enfimye ?", "Ki swen pou yon pasyan dyabetik ?"],
-    en: ["What are WHO protocols for Haiti?", "How to prepare the nursing state exam?", "What care for a diabetic patient?"],
+    fr: ["Comment démarrer en développement web ?", "Quelles certifications IT sont disponibles ?", "Comment accéder aux projets IA ?", "Comment progresser en cybersécurité ?"],
+    ht: ["Kijan pou kòmanse nan devlopman web ?", "Ki sètifikasyon IT ki disponib ?", "Kijan pou jwenn aksè nan pwojè IA yo ?"],
+    en: ["How to start in web development?", "What IT certifications are available?", "How to access AI projects?"],
   },
 };
 
