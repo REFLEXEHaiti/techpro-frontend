@@ -39,16 +39,16 @@ interface ExamenConfig {
 }
 
 const QUESTIONS_FALLBACK: Question[] = [
-  { id: 'q1', source: 'IA', texte: 'Quelle est la fréquence cardiaque normale chez un adulte au repos ?', options: ['40-60 bpm', '60-100 bpm', '100-120 bpm', '120-140 bpm'], bonneReponse: 1, explication: 'La FC normale est 60-100 bpm au repos. <60 = bradycardie, >100 = tachycardie.' },
-  { id: 'q2', source: 'IA', texte: 'Quelle est la tension artérielle normale ?', options: ['90/60 mmHg', '120/80 mmHg', '140/90 mmHg', '160/100 mmHg'], bonneReponse: 1, explication: 'TA normale = 120/80 mmHg. Au-dessus de 140/90 = hypertension artérielle.' },
-  { id: 'q3', source: 'IA', texte: 'Premier geste en cas d\'arrêt cardiaque ?', options: ['Appeler la famille', 'Appeler secours + MCE', 'Attendre l\'ambulance', 'Médicament'], bonneReponse: 1, explication: 'Appeler les secours immédiatement et débuter le massage cardiaque externe (30/2).' },
-  { id: 'q4', source: 'IA', texte: 'Saturation en oxygène normale (SpO2) ?', options: ['85-90%', '90-94%', '95-100%', '100% uniquement'], bonneReponse: 2, explication: 'SpO2 normale : 95-100%. Sous 90% = hypoxémie, oxygénothérapie urgente.' },
-  { id: 'q5', source: 'IA', texte: 'Posologie adulte du paracétamol ?', options: ['250 mg/4h', '500-1000 mg/6-8h', '2000 mg/12h', '100 mg/2h'], bonneReponse: 1, explication: '500-1000 mg toutes les 6-8h, max 3-4g/jour. Analgésique de référence en Haïti.' },
-  { id: 'q6', source: 'IA', texte: 'Température corporelle normale ?', options: ['35°C', '36-37.5°C', '38°C', '39°C'], bonneReponse: 1, explication: 'Normale : 36-37.5°C. Au-dessus de 38°C = fièvre.' },
-  { id: 'q7', source: 'IA', texte: 'Durée du lavage des mains selon l\'OMS ?', options: ['15 secondes', '20 secondes', '40-60 secondes', '2 minutes'], bonneReponse: 2, explication: 'L\'OMS recommande 40 à 60 secondes au savon pour un lavage efficace.' },
-  { id: 'q8', source: 'IA', texte: 'Médicament de première intention lors d\'une crise d\'asthme légère ?', options: ['Adrénaline', 'Salbutamol (Ventolin)', 'Cortisone orale', 'Amoxicilline'], bonneReponse: 1, explication: 'Le salbutamol est un β2-agoniste à courte durée d\'action, traitement de la crise d\'asthme légère à modérée.' },
-  { id: 'q9', source: 'IA', texte: 'Signe principal d\'une déshydratation sévère ?', options: ['Rougeur', 'Pli cutané persistant', 'Polyurie', 'Bradycardie'], bonneReponse: 1, explication: 'Le pli cutané persistant indique une perte hydrique importante. La peau ne reprend pas sa position.' },
-  { id: 'q10', source: 'IA', texte: 'Glycémie capillaire normale à jeun ?', options: ['0.5-0.7 g/L', '0.7-1.1 g/L', '1.2-1.5 g/L', '1.5-2 g/L'], bonneReponse: 1, explication: 'Normale à jeun : 0.7-1.1 g/L. Diabète si ≥ 1.26 g/L à 2 reprises.' },
+  { id: 'q1', source: 'IA', texte: 'Quelle est la complexité temporelle d'une recherche binaire ?', options: ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], bonneReponse: 1, explication: 'La recherche binaire divise le tableau en deux à chaque étape, donnant une complexité de O(log n). C\'est bien plus efficace que la recherche linéaire O(n) pour les tableaux triés.' },
+  { id: 'q2', source: 'IA', texte: 'Qu\'est-ce que le Big O notation O(1) ?', options: ['Très lent', 'Dépend de l\'entrée', 'Temps constant', 'Logarithmique'], bonneReponse: 1, explication: 'O(1) signifie temps constant — l\'opération prend le même temps quelle que soit la taille de l\'entrée. Ex: accéder à un index de tableau.' },
+  { id: 'q3', source: 'IA', texte: 'Quelle commande Git annule le dernier commit sans perdre les changements ?', options: ['git revert HEAD', 'git reset --soft HEAD~1', 'git checkout HEAD', 'git delete commit'], bonneReponse: 1, explication: '`git reset --soft HEAD~1` annule le dernier commit mais conserve les fichiers modifiés dans le staging area. `git revert` crée un nouveau commit inverse.' },
+  { id: 'q4', source: 'IA', texte: 'Quelle méthode HTTP est idempotente et sécurisée ?', options: ['POST', 'DELETE', 'GET', 'PATCH'], bonneReponse: 2, explication: 'GET est à la fois idempotente (même résultat si répété) et sécurisée (ne modifie pas l\'état du serveur). POST n\'est ni l\'un ni l\'autre.' },
+  { id: 'q5', source: 'IA', texte: 'Qu\'est-ce que le principe SOLID en programmation ?', options: ['Simple, Open, Left, Interface, Dependency', 'Single responsibility, Open/closed, Liskov, Interface segregation, Dependency inversion', 'Secure, Object, Linked, Integrated, Dynamic', 'None of the above'], bonneReponse: 1, explication: 'SOLID: S=Single Responsibility, O=Open/Closed, L=Liskov Substitution, I=Interface Segregation, D=Dependency Inversion. Ces 5 principes guident la conception orientée objet robuste.' },
+  { id: 'q6', source: 'IA', texte: 'Quelle est la différence entre SQL et NoSQL ?', options: ['SQL est plus rapide', 'SQL = relationnel structuré, NoSQL = flexible non-relationnel', 'NoSQL ne supporte pas les requêtes', 'Ils sont identiques'], bonneReponse: 1, explication: 'SQL (MySQL, PostgreSQL) utilise des tables relationnelles avec schéma fixe. NoSQL (MongoDB, Redis) offre plus de flexibilité pour les données non structurées. Le choix dépend du cas d\'usage.' },
+  { id: 'q7', source: 'IA', texte: 'Quel protocole HTTP est utilisé pour les WebSockets ?', options: ['HTTP/1.1', 'HTTP/2', 'WebSocket (ws://)', 'FTP'], bonneReponse: 2, explication: 'WebSocket utilise le protocole ws:// (ou wss:// sécurisé). Il permet une communication bidirectionnelle full-duplex entre client et serveur, contrairement à HTTP.' },
+  { id: 'q8', source: 'IA', texte: 'Quelle est la commande pour créer un projet React avec Vite ?', options: ['npx create-react-app', 'npm init vite@latest', 'npm create react', 'npx vite new'], bonneReponse: 1, explication: '`npm create vite@latest` ou `npm init vite@latest` crée un projet React avec Vite. Vite est beaucoup plus rapide que Create React App grâce au bundling ES modules natif.' },
+  { id: 'q9', source: 'IA', texte: 'Qu\'est-ce qu\'une API REST ?', options: ['Réseau En Serveur Temps-réel', 'Representational State Transfer', 'Remote Execution Service Tool', 'Relational Entity System Type'], bonneReponse: 1, explication: 'REST (Representational State Transfer) est un style architectural pour les APIs web utilisant HTTP. Il utilise les méthodes GET, POST, PUT, DELETE et retourne généralement du JSON.' },
+  { id: 'q10', source: 'IA', texte: 'Quelle est la différence entre == et === en JavaScript ?', options: ['Aucune différence', '== compare valeur seulement, === compare valeur ET type', '=== est plus lent', '== est plus strict'], bonneReponse: 1, explication: '== fait une comparaison lâche avec coercition de type (1 == \'1\' → true). === fait une comparaison stricte sans coercition (1 === \'1\' → false). Toujours utiliser === en JavaScript.' },
 ];
 
 const NIV_CFG: Record<string, { bg: string; text: string; label: string }> = {
@@ -72,7 +72,7 @@ const QUIZ_DEMO: ExamenConfig[] = [
 
 const EXAMENS_DEMO: ExamenConfig[] = [
   { id: 'e1', titre: 'Examen final — Développement Web avancés', categorie: 'Développement Web', niveau: 'AVANCE', nbQuestions: 20, dureeMin: 45, type: 'EXAMEN', statut: 'OUVERT', dateDebut: '2026-04-15', dateFin: '2026-04-20', formateurNom: 'Jean-Pierre Moreau' },
-  { id: 'e2', titre: 'Évaluation — Cybersécurité clinique', categorie: 'Cybersécurité', niveau: 'INTERMEDIAIRE', nbQuestions: 15, dureeMin: 30, type: 'EXAMEN', statut: 'PROGRAMME', dateDebut: '2026-05-01', dateFin: '2026-05-03', formateurNom: 'Marie Théodore' },
+  { id: 'e2', titre: 'Évaluation — Cybersécurité Avancée', categorie: 'Cybersécurité', niveau: 'INTERMEDIAIRE', nbQuestions: 15, dureeMin: 30, type: 'EXAMEN', statut: 'PROGRAMME', dateDebut: '2026-05-01', dateFin: '2026-05-03', formateurNom: 'Jean-Baptiste Pierre' },
   { id: 'e3', titre: 'Certification — Cloud Computing pédiatriques', categorie: 'DevOps', niveau: 'AVANCE', nbQuestions: 25, dureeMin: 50, type: 'EXAMEN', statut: 'FERME', dateDebut: '2026-03-10', dateFin: '2026-03-12', formateurNom: 'Paul Étienne' },
 ];
 
@@ -258,7 +258,7 @@ function CorrigeDetaille({ quiz, reponses, questions, score, onRecommencer, onRe
         {score >= 75 && quiz.type === 'EXAMEN' && (
           <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 10, padding: '12px 16px' }}>
             <div style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 14, color: '#1E40AF', fontWeight: 700 }}>
-              🏅 Éligible à la certification MSP — disponible dans votre profil sous 24h
+              🏅 Éligible à la certification TechPro — disponible dans votre profil sous 24h
             </div>
           </div>
         )}
@@ -401,7 +401,7 @@ function ModalCreerExamen({ onFermer, onCreer, primaire, secondaire }: {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div><label style={lbl}>Titre *</label><input value={form.titre} onChange={e => setForm(p => ({ ...p, titre: e.target.value }))} placeholder="Ex : Examen final — Développement Web avancés" style={inp} /></div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-              <div><label style={lbl}>Catégorie médicale</label>
+              <div><label style={lbl}>Catégorie IT</label>
                 <select value={form.categorie} onChange={e => setForm(p => ({ ...p, categorie: e.target.value }))} style={{ ...inp, appearance: 'none' as any }}>
                   {CATS.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
@@ -579,8 +579,8 @@ export default function PageQuiz() {
       <section style={{ background: `linear-gradient(135deg, #0D1B2A 0%, ${primaire} 100%)`, padding: 'clamp(40px,6vw,64px) clamp(20px,5vw,48px)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 20 }}>
           <div>
-            <div style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: secondaire, fontWeight: 700, marginBottom: 12 }}>Quiz IA & Examens médicaux</div>
-            <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 10px', fontWeight: 'normal' }}>Évaluations MediForm</h1>
+            <div style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: secondaire, fontWeight: 700, marginBottom: 12 }}>Certifications & Quiz IT</div>
+            <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 10px', fontWeight: 'normal' }}>Évaluations TechPro Haiti</h1>
             <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.7)', maxWidth: 500, margin: 0, lineHeight: 1.6 }}>
               Quiz générés par IA, examens des formateurs et corrigé détaillé automatique après chaque évaluation.
             </p>

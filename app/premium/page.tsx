@@ -13,7 +13,7 @@ const BLEU = '#FF6B35';
 const TARIFS = [
   {
     id: 'GRATUIT', label: 'Gratuit', montantHTG: 0, recommande: false, icone: '💻',
-    avantages: ['3 formations IT gratuites', '3 formations IT gratuites', 'Assistant IA tech — 3 questions/mois', 'Accès aux webinaires publics'],
+    avantages: ['3 formations IT gratuites', '3 formations IT gratuites', 'Assistant IA tech — 3 consultations/mois', 'Accès aux conférences publiques'],
   },
   {
     id: 'PREMIUM', label: 'Développeur', montantHTG: 600, recommande: true, icone: '🖥️',

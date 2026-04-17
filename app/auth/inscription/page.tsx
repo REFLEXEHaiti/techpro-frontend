@@ -106,7 +106,7 @@ export default function PageInscription() {
 
         {/* Étapes */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24, justifyContent: 'center' }}>
-          {[{ n: 1, label: 'Identité' }, { n: 2, label: 'Profil médical' }].map((s, i) => (
+          {[{ n: 1, label: 'Identité' }, { n: 2, label: 'Profil professionnel' }].map((s, i) => (
             <div key={s.n} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               {i > 0 && <div style={{ width: 36, height: 2, background: etape > s.n ? primaire : '#CBD5E1', borderRadius: 1 }} />}
               <div style={{ width: 32, height: 32, borderRadius: '50%', background: etape >= s.n ? primaire : '#CBD5E1', color: etape >= s.n ? 'white' : '#64748B', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Helvetica Neue',Arial,sans-serif", fontWeight: 700, fontSize: 14, transition: 'background 0.2s' }}>
@@ -179,10 +179,10 @@ export default function PageInscription() {
             </form>
           )}
 
-          {/* ── Étape 2 : Profil médical ── */}
+          {/* ── Étape 2 : Profil professionnel ── */}
           {etape === 2 && (
             <form onSubmit={soumettre} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 20, fontWeight: 'normal', color: '#0D1B2A', margin: '0 0 4px' }}>Votre profil médical</h2>
+              <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 20, fontWeight: 'normal', color: '#0D1B2A', margin: '0 0 4px' }}>Votre profil professionnel</h2>
 
               <div>
                 <label style={lbl}>Je suis *</label>

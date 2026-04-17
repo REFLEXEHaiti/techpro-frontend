@@ -137,7 +137,7 @@ function ContenuAdmin() {
       {/* Entête */}
       <div style={{ background: `linear-gradient(135deg, ${VERT} 0%, #0D4D2E 100%)`, padding: 'clamp(24px,4vw,36px) clamp(20px,5vw,48px)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: 24, fontWeight: 800, color: 'white', margin: '0 0 6px' }}>Administration MediForm</h1>
+          <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: 24, fontWeight: 800, color: 'white', margin: '0 0 6px' }}>Administration TechPro Haiti</h1>
           <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 13, color: 'rgba(255,255,255,0.65)', margin: 0 }}>
             Gestion des utilisateurs, formations, paiements et partenaires
           </p>
@@ -362,7 +362,7 @@ function ContenuAdmin() {
             <form onSubmit={ajouterSponsor} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <div>
                 <label style={{ display: 'block', fontFamily: "'Inter',sans-serif", fontSize: 12, fontWeight: 600, color: '#374151', marginBottom: 5 }}>Nom *</label>
-                <input value={formSponsor.nom} required onChange={e => setFormSponsor(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : MSPP Haïti" style={inp} />
+                <input value={formSponsor.nom} required onChange={e => setFormSponsor(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : TechPro Partner" style={inp} />
               </div>
               <div>
                 <label style={{ display: 'block', fontFamily: "'Inter',sans-serif", fontSize: 12, fontWeight: 600, color: '#374151', marginBottom: 5 }}>Site web</label>

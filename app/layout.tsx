@@ -1,4 +1,4 @@
-// app/layout.tsx — MediForm Haiti
+// app/layout.tsx — TechPro Haiti Haiti
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';

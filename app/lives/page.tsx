@@ -22,11 +22,11 @@ const getEmbedUrl = (url: string) => {
 };
 
 const LIVES_DEMO = [
-  { id: 'L1', titre: 'Masterclass React 18 — Server Components & Suspense', description: 'Les nouvelles fonctionnalités React 18 : Server Components, Concurrent Mode et Suspense expliqués.', categorie: 'Développement Web', statut: 'TERMINE', vues: 1840, dateDebut: '2026-03-05', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', videoUrl: '' },
-  { id: 'L2', titre: 'Cybersécurité en Haïti — Protégez votre infrastructure', description: 'Sécuriser les réseaux et applications dans le contexte haïtien : menaces locales et solutions.', categorie: 'Cybersécurité', statut: 'TERMINE', vues: 1230, dateDebut: '2026-03-18', youtubeUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U', videoUrl: '' },
-  { id: 'L3', titre: 'Réanimation pédiatrique — challenges techniques commentés', description: 'Pandas, NumPy, Matplotlib et Scikit-learn appliqués aux données haïtiennes réelles.', categorie: 'DevOps', statut: 'TERMINE', vues: 980, dateDebut: '2026-02-28', youtubeUrl: 'https://www.youtube.com/watch?v=L_jWHffIx5E', videoUrl: '' },
-  { id: 'L4', titre: 'AWS Cloud Practitioner — Certifiez-vous en 30 jours', description: 'Préparation à la certification AWS Cloud Practitioner — services essentiels et architecture cloud.', categorie: 'Réseaux & Systèmes', statut: 'TERMINE', vues: 2100, dateDebut: '2026-02-14', youtubeUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', videoUrl: '' },
-  { id: 'L5', titre: 'TechPro Hackathon 2026 — Développez pour Haïti', description: 'Hackathon national — 48h pour construire des solutions tech aux problèmes haïtiens.', categorie: 'Intelligence Artificielle', statut: 'PROGRAMME', vues: 0, dateDebut: '2026-06-15', youtubeUrl: '', videoUrl: '' },
+  { id: 'L1', titre: 'Masterclass React 18 — Server Components & Suspense', description: 'Les nouvelles fonctionnalités React 18 : Server Components, Concurrent Mode et Suspense expliqués en profondeur.', categorie: 'Intelligence Artificielle', statut: 'TERMINE', vues: 1840, dateDebut: '2026-03-05', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', videoUrl: '' },
+  { id: 'L2', titre: 'Cybersécurité en Haïti — Protégez votre infrastructure', description: 'Sécuriser les réseaux et applications dans le contexte haïtien : menaces locales, firewalls et bonnes pratiques.', categorie: 'Data Science', statut: 'TERMINE', vues: 1230, dateDebut: '2026-03-18', youtubeUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U', videoUrl: '' },
+  { id: 'L3', titre: 'Réanimation pédiatrique — challenges techniques commentés', description: 'Analyse de cas réels de réanimation néonatale et pédiatrique dans les hôpitaux haïtiens.', categorie: 'DevOps', statut: 'TERMINE', vues: 980, dateDebut: '2026-02-28', youtubeUrl: 'https://www.youtube.com/watch?v=L_jWHffIx5E', videoUrl: '' },
+  { id: 'L4', titre: 'Cholestérol, HTA et diabète en Haïti — épidémiologie et prise en charge', description: 'Conférence sur les maladies chroniques non transmissibles, première cause de mortalité en Haïti.', categorie: 'Réseaux & Systèmes', statut: 'TERMINE', vues: 2100, dateDebut: '2026-02-14', youtubeUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', videoUrl: '' },
+  { id: 'L5', titre: 'TechPro Hackathon 2026 — Développez pour Haïti', description: '48h pour construire des solutions tech aux problèmes haïtiens. Prix et certifications à la clé.', categorie: 'Développement Web', statut: 'PROGRAMME', vues: 0, dateDebut: '2026-06-15', youtubeUrl: '', videoUrl: '' },
 ];
 
 const CATS = ['Tous', 'Développement Web', 'Intelligence Artificielle', 'Data Science', 'DevOps', 'Réseaux & Systèmes', 'Cloud Computing', 'Développement Mobile'];
@@ -35,7 +35,7 @@ const CAT_COLORS: Record<string, string> = {
   'DevOps': '#FF6B35', 'Réseaux & Systèmes': '#7C3AED', 'Cloud Computing': '#DC2626', 'Développement Mobile': '#7C2D12',
 };
 
-const FORM_VIDE = { titre: '', description: '', categorie: 'Intelligence Artificielle', statut: 'PROGRAMME', dateDebut: '', type: 'LIVE' as 'LIVE' | 'UPLOAD', youtubeUrl: '', videoUrl: '' };
+const FORM_VIDE = { titre: '', description: '', categorie: 'Développement Web', statut: 'PROGRAMME', dateDebut: '', type: 'LIVE' as 'LIVE' | 'UPLOAD', youtubeUrl: '', videoUrl: '' };
 
 export default function PageLives() {
   const { utilisateur } = useAuthStore();
@@ -133,7 +133,7 @@ export default function PageLives() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 20 }}>
           <div>
             <div style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: secondaire, fontWeight: 700, marginBottom: 14 }}>Webinaires Tech & Projets IA</div>
-            <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 10px', fontWeight: 'normal' }}>MediForm — En direct & Replays</h1>
+            <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 10px', fontWeight: 'normal' }}>TechPro Haiti — En direct & Replays</h1>
             <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.7)', maxWidth: 520, margin: 0, lineHeight: 1.7 }}>
               Webinaires tech, masterclasses, hackathons et replays des formations IT en direct.
             </p>

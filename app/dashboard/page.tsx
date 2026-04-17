@@ -145,7 +145,7 @@ export default function PageDashboard() {
               <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 18, color: '#0D1B2A', margin: '0 0 16px', fontWeight: 'normal' }}>Navigation rapide</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {[
-                  { href: '/formations',  label: '📚 Formations médicales',        bg: `${primaire}08`, color: primaire },
+                  { href: '/formations',  label: '📚 Formations IT',        bg: `${primaire}08`, color: primaire },
                   { href: '/tournois',    label: '🖥️ Projets IA',       bg: `${secondaire}10`, color: secondaire },
                   { href: '/lives',       label: '🎥 Webinaires Tech',       bg: '#F0FDF4',  color: '#059669' },
                   { href: '/bibliotheque',label: '📖 Bibliothèque Tech',       bg: '#F5F3FF',  color: '#7C3AED' },
@@ -161,7 +161,7 @@ export default function PageDashboard() {
             <div style={{ background: 'white', borderRadius: 14, border: '1px solid #CBD5E1', padding: '20px 24px' }}>
               <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 18, color: '#0D1B2A', margin: '0 0 16px', fontWeight: 'normal' }}>Certifications</h2>
               {(!data?.badges || data.badges.length === 0) ? (
-                <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#64748B', textAlign: 'center', padding: '20px 0' }}>Complétez des formations pour obtenir des certifications médicales.</p>
+                <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#64748B', textAlign: 'center', padding: '20px 0' }}>Complétez des formations pour obtenir des certifications IT.</p>
               ) : (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {data.badges.map((b: any) => (
@@ -208,7 +208,7 @@ export default function PageDashboard() {
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}>
           <div style={{ background: 'white', borderRadius: 16, padding: '28px 32px', width: '100%', maxWidth: 480, boxShadow: '0 24px 64px rgba(0,0,0,0.2)', maxHeight: '90vh', overflowY: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 22, paddingBottom: 14, borderBottom: `2px solid ${primaire}` }}>
-              <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 18, color: primaire, margin: 0 }}>Ajouter un partenaire santé</h2>
+              <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 18, color: primaire, margin: 0 }}>Ajouter un partenaire tech</h2>
               <button onClick={() => setModalSponsor(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 20, color: '#64748B' }}>✕</button>
             </div>
             <form onSubmit={ajouterSponsor} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -228,7 +228,7 @@ export default function PageDashboard() {
                 <input ref={logoRef} type="file" accept="image/png,image/jpeg,image/jpg,image/svg+xml,image/webp" onChange={handleLogo} style={{ display: 'none' }} />
                 {logoErreur && <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 12, color: '#DC2626', margin: '6px 0 0' }}>⚠ {logoErreur}</p>}
               </div>
-              <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Nom de l'organisation *</label><input required value={formSponsor.nom} onChange={e => setFormSponsor(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : MSPP Haïti" style={inp} /></div>
+              <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Nom de l'organisation *</label><input required value={formSponsor.nom} onChange={e => setFormSponsor(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : TechPro Partner" style={inp} /></div>
               <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Site web</label><input type="url" value={formSponsor.siteWeb} onChange={e => setFormSponsor(p => ({ ...p, siteWeb: e.target.value }))} placeholder="https://..." style={inp} /></div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Niveau partenariat</label>

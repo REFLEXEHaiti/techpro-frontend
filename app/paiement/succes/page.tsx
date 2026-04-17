@@ -36,7 +36,7 @@ export default function PagePaiementSucces() {
 
         <Link href="/dashboard"
           style={{ display: 'inline-block', padding: '16px 40px', background: primaire, color: 'white', borderRadius: 100, textDecoration: 'none', fontFamily: "'Helvetica Neue',Arial,sans-serif", fontWeight: 700, fontSize: 16 }}>
-          Accéder à mon espace médical →
+          Accéder à mon espace professionnel →
         </Link>
 
         <div style={{ marginTop: 16 }}>

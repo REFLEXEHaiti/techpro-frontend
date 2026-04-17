@@ -1,6 +1,6 @@
 // app/simulations/page.tsx — TechPro Haiti
 // ⚠️ EXCLUSIF À MEDIFORM HAITI — module unique, absent de LexHaiti et TechPro
-// Projets IA générés par l'IA — TechPro Haiti
+// Projets IA générées par l'IA médicale
 
 'use client';
 
@@ -13,11 +13,11 @@ const VERT = '#1B3A6B';
 const BLEU = '#FF6B35';
 
 const CAS_TYPES = [
-  { id: 'web',        label: 'Développement Web',              description: 'Créez des applications web complètes avec React, Node.js et des APIs REST.',  icone: '🌐', couleur: '#1B3A6B' },
+  { id: 'urgence',    label: 'Cloud Computing médicales',     description: 'Traumatismes, arrêt cardiaque, choc anaphylactique, AVC…',         icone: '🚨', couleur: '#DC2626' },
   { id: 'maternite',  label: 'Maternité & Data Science', description: 'Accouchements, complications, hémorragie post-partum, prééclampsie…', icone: '👶', couleur: BLEU },
-  { id: 'pediatrie',  label: 'DevOps',               description: 'Diarrhée sévère, malnutrition, paludisme chez l\'enfant, infections…', icone: '💻', couleur: '#9B59B6' },
+  { id: 'devops',     label: 'DevOps & Cloud',        description: 'Docker, Kubernetes, CI/CD, AWS, déploiement automatisé.',              icone: '⚙️', couleur: '#9B59B6' },
   { id: 'chronique',  label: 'Maladies chroniques',     description: 'Diabète, hypertension, tuberculose, VIH/SIDA, insuffisance rénale…',  icone: '❤️', couleur: VERT },
-  { id: 'cyber',      label: 'Cybersécurité',           description: 'Pentest, audit de sécurité, CTF et défense des systèmes haïtiens.',       icone: '🔒', couleur: '#DC2626' },
+  { id: 'data',       label: 'Data Science',           description: 'Analyse de données, Machine Learning, visualisation avec Python.',    icone: '📊', couleur: '#E67E22' },
   { id: 'psychiatrie',label: 'Santé mentale',           description: 'Dépression, PTSD post-catastrophe, psychose, gestion de crise…',    icone: '🧠', couleur: '#1ABC9C' },
 ];
 
@@ -87,13 +87,13 @@ function ContenuSimulations() {
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.15)', color: 'white', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100, marginBottom: 16 }}>
-            Générateur de Projets IA — TechPro
+            Générateur de Projets IA
           </div>
           <h1 style={{ fontSize: 'clamp(28px,4vw,48px)', color: 'white', marginBottom: 14, fontWeight: 800 }}>
-            Pratiquez sur des cas patients
+            Pratiquez sur des cas projets
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
-            L'IA génère un projet complet avec architecture, stack technique recommandé, étapes de développement et ressources. Usage éducatif.
+            L'IA génère un projet complet : architecture, stack recommandée, étapes de développement et ressources. Usage éducatif.
           </p>
           <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 100, padding: '8px 16px' }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ADE80' }} />
@@ -109,7 +109,7 @@ function ContenuSimulations() {
             {/* Sélection type de cas */}
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0D1F2D', marginBottom: 16 }}>
-                1. Choisissez le domaine clinique
+                1. Choisissez le domaine technique
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
                 {CAS_TYPES.map(c => (
@@ -128,13 +128,13 @@ function ContenuSimulations() {
             {/* Formulaire du cas */}
             <div style={{ background: 'white', border: '1px solid #E2E8F0', borderRadius: 16, padding: '28px 32px', marginBottom: 24 }}>
               <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0D1F2D', marginBottom: 24 }}>
-                2. Décrivez le cas clinique
+                2. Décrivez le cas technique
               </h2>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
                 <div>
                   <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 8 }}>
-                    Type de patient *
+                    Type de projet *
                   </label>
                   <input type="text" value={typePatient} onChange={e => setTypePatient(e.target.value)}
                     placeholder="Ex : Femme enceinte 32 ans, 8 mois de grossesse"
@@ -161,7 +161,7 @@ function ContenuSimulations() {
                   Description complète de la situation *
                 </label>
                 <textarea value={description} onChange={e => setDescription(e.target.value)} rows={5}
-                  placeholder="Décrivez la situation clinique en détail : contexte, heure d'arrivée, constantes si disponibles, antécédents pertinents, ressources disponibles (médicaments, équipements)…"
+                  placeholder="Décrivez votre project technique en détail : contexte, heure d'arrivée, constantes si disponibles, antécédents pertinents, ressources disponibles (médicaments, équipements)…"
                   style={{ width: '100%', padding: '12px 14px', border: '1.5px solid #E2E8F0', borderRadius: 10, fontSize: 14, outline: 'none', resize: 'vertical', fontFamily: "'Inter',sans-serif", color: '#374151', boxSizing: 'border-box', lineHeight: 1.6 }}
                   onFocus={e => { e.target.style.borderColor = VERT; }}
                   onBlur={e => { e.target.style.borderColor = '#E2E8F0'; }}
@@ -176,7 +176,7 @@ function ContenuSimulations() {
 
               <button onClick={lancerSimulation} disabled={chargement || !description.trim() || !typePatient.trim()}
                 style={{ width: '100%', padding: '16px', background: chargement ? '#94A3B8' : VERT, color: 'white', border: 'none', borderRadius: 10, fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: 16, cursor: chargement || !description.trim() ? 'not-allowed' : 'pointer', transition: 'background 0.2s' }}>
-                {chargement ? '⏳ L\'IA analyse le cas clinique…' : '💻 Lancer la simulation →'}
+                {chargement ? '⏳ L\'IA analyse le cas technique…' : '💻 Lancer la simulation →'}
               </button>
             </div>
 
@@ -184,7 +184,7 @@ function ContenuSimulations() {
             <div style={{ background: '#EBF3FB', border: '1px solid #BFDBFE', borderRadius: 12, padding: '16px 20px', display: 'flex', gap: 12 }}>
               <div style={{ fontSize: 20, flexShrink: 0 }}>ℹ️</div>
               <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 13, color: '#1E40AF', lineHeight: 1.6, margin: 0 }}>
-                Cette simulation est à des fins éducatives uniquement. L'IA ne pose pas de diagnostic. Pour tout cas réel, appliquez les protocoles MSPP et consultez un médecin superviseur.
+                Ce projet est à des fins éducatives uniquement. L'IA ne pose pas de diagnostic. Pour tout cas réel, appliquez les protocoles MSPP et consultez un médecin superviseur.
               </p>
             </div>
           </>

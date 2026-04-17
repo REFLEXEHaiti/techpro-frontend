@@ -3,7 +3,7 @@
 // Le chatbot IA s'adapte automatiquement au domaine du tenant :
 //   - LexHaiti    → assistant droit haïtien
 //   - TechPro     → assistant formations professionnelles
-//   - MediForm    → assistant médical/infirmier
+//   - TechPro Haiti    → assistant médical/infirmier
 // Les suggestions et le message d'accueil changent par plateforme
 
 'use client';

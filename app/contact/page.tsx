@@ -10,7 +10,7 @@ const BLEU = '#FF6B35';
 
 const SUJETS = [
   { value: 'formation',    label: 'Question sur une formation' },
-  { value: 'certification', label: 'Certification MSPP / OIIH' },
+  { value: 'certification', label: 'Certification IT professionnelle' },
   { value: 'simulation',   label: 'Projet IA / Challenge' },
   { value: 'partenariat',  label: 'Partenariat institutionnel' },
   { value: 'technique',    label: 'Problème technique' },
@@ -158,10 +158,10 @@ export default function PageContact() {
               🖥️ Partenariat institutionnel
             </h3>
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 13, color: '#64748B', lineHeight: 1.65, marginBottom: 14 }}>
-              Vous représentez une entreprise, une école informatique, une ONG ou un organisme de formation ? Contactez-nous pour former vos équipes IT avec TechPro Haiti.
+              Vous représentez une entreprise, une ONG, une école informatique ou un organisme haïtien ? Contactez-nous pour former vos équipes IT.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {['Hôpitaux', 'Cliniques communautaires', 'Écoles infirmières', 'MSPP / OPS'].map(tag => (
+              {['Entreprises tech', 'Écoles informatiques', 'ONG & associations', 'Institutions publiques'].map(tag => (
                 <span key={tag} style={{ background: `${VERT}12`, color: VERT, fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 100, fontFamily: "'Inter',sans-serif" }}>
                   {tag}
                 </span>
