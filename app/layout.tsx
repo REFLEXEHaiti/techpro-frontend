@@ -12,11 +12,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'TechPro Haiti — Formations IT & Développement Professionnel',
-  description: 'La plateforme de formation médicale haïtienne. Cours, protocoles cliniques, simulations et certifications.',
+  description: 'La plateforme de formation IT professionnelle haïtienne. Développement web, cybersécurité, cloud et certifications.',
   keywords: 'formation informatique haïti, développement web, cybersécurité, réseaux',
   openGraph: {
     title: 'TechPro Haiti — Formations Pro & IT',
-    description: 'Formation médicale professionnelle en Haïti',
+    description: 'Formation IT professionnelle en Haïti',
     siteName: 'TechPro Haiti',
   },
 };

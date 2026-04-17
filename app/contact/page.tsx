@@ -11,7 +11,7 @@ const BLEU = '#FF6B35';
 const SUJETS = [
   { value: 'formation',    label: 'Question sur une formation' },
   { value: 'certification', label: 'Certification MSPP / OIIH' },
-  { value: 'simulation',   label: 'Simulation clinique' },
+  { value: 'simulation',   label: 'Projet IA / Challenge' },
   { value: 'partenariat',  label: 'Partenariat institutionnel' },
   { value: 'technique',    label: 'Problème technique' },
   { value: 'autre',        label: 'Autre' },
@@ -158,7 +158,7 @@ export default function PageContact() {
               🖥️ Partenariat institutionnel
             </h3>
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 13, color: '#64748B', lineHeight: 1.65, marginBottom: 14 }}>
-              Vous représentez un hôpital, une clinique, une école de soins infirmiers ou le MSPP ? Contactez-nous pour former vos équipes avec TechPro Haiti.
+              Vous représentez une entreprise, une école informatique, une ONG ou un organisme de formation ? Contactez-nous pour former vos équipes IT avec TechPro Haiti.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               {['Hôpitaux', 'Cliniques communautaires', 'Écoles infirmières', 'MSPP / OPS'].map(tag => (

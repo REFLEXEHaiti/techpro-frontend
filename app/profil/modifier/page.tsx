@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 
 const VERT = '#1B3A6B';
 const VILLES = ['Port-au-Prince','Pétion-Ville','Cap-Haïtien','Gonaïves','Les Cayes','Jacmel','Saint-Marc','Hinche','Jérémie','Miami','New York','Montréal','Paris','Autre'];
-const ROLES_MED = ['Infirmier(ère) diplômé(e)', 'Étudiant(e) infirmier(ère)', 'Aide-soignant(e)', 'Sage-femme', 'Auxiliaire médical(e)', 'Médecin', 'Gestionnaire de clinique', 'Autre'];
+const ROLES_MED = ['Développeur Web', 'Développeur Mobile', 'Data Scientist', 'Administrateur Réseau', 'Cybersécurité', 'DevOps Engineer', 'Chef de Projet IT', 'Étudiant IT', 'Autre'];
 
 export default function PageModifierProfil() {
   return <ProtectedRoute><ContenuModifier /></ProtectedRoute>;

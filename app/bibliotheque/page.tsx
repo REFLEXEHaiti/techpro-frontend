@@ -13,26 +13,26 @@ const OR       = '#FF6B35';
 
 const COLLECTIONS_BASE = [
   {
-    id: 'codes', titre: 'Documentation Technique', icone: '🖥️', couleur: BORDEAUX,
-    description: 'Documentation de code adaptés au contexte haïtien et recommandations OMS',
+    id: 'codes', titre: 'Langages & Frameworks', icone: '💻', couleur: BORDEAUX,
+    description: 'Guides et documentations des langages et frameworks populaires',
     items: [
       { id: 'c1', titre: 'Documentation de code infirmiers fondamentaux', pages: 245, annee: '2024', gratuit: true, type: 'document' },
       { id: 'c2', titre: 'Guide cybersécurité en Haïti', pages: 312, annee: '2023', gratuit: true, type: 'document' },
-      { id: 'c3', titre: 'Protocoles obstétricaux — Accouchement normal et dystocique', pages: 198, annee: '2024', gratuit: false, type: 'document' },
-      { id: 'c4', titre: 'Gestion des maladies tropicales endémiques', pages: 287, annee: '2023', gratuit: false, type: 'document' },
+      { id: 'c3', titre: 'React — Documentation Officielle', pages: 456, annee: '2024', gratuit: false, type: 'document' },
+      { id: 'c4', titre: 'Node.js & Express — Guide du Développeur', pages: 378, annee: '2023', gratuit: false, type: 'document' },
     ],
   },
   {
-    id: 'constitutions', titre: 'Langages & Frameworks', icone: '💊', couleur: '#1A3A6B',
+    id: 'constitutions', titre: 'Langages & Frameworks', icone: '🔒', couleur: '#1A3A6B',
     description: 'Médicaments essentiels, formulaire national et documentation API',
     items: [
       { id: 'co1', titre: 'Liste des bibliothèques JavaScript — Haïti 2024', pages: 156, annee: '2024', gratuit: true, type: 'document' },
-      { id: 'co2', titre: 'Guide thérapeutique du praticien haïtien', pages: 534, annee: '2023', gratuit: false, type: 'document' },
+      { id: 'co2', titre: 'Ethical Hacking — CEH Study Guide', pages: 687, annee: '2023', gratuit: false, type: 'document' },
       { id: 'co3', titre: 'Acte de l\'Indépendance 1804', pages: 12, annee: '1804', gratuit: true, type: 'document' },
     ],
   },
   {
-    id: 'jurisprudences', titre: 'Articles & Blogs Tech', icone: '🔬', couleur: '#065F46',
+    id: 'jurisprudences', titre: 'Articles & Blogs Tech', icone: '☁️', couleur: '#065F46',
     description: 'Décisions de la Cour de Cassation, tribunaux civils et cours d\'appel',
     items: [
       { id: 'j1', titre: 'State of JS Report haïtien 2024', pages: 180, annee: '2024', gratuit: true, type: 'document' },
@@ -40,7 +40,7 @@ const COLLECTIONS_BASE = [
     ],
   },
   {
-    id: 'doctrine', titre: 'Livres & E-books IT', icone: '📖', couleur: '#7C2D12',
+    id: 'doctrine', titre: 'Livres & E-books IT', icone: '🤖', couleur: '#7C2D12',
     description: 'Articles doctrinaux, thèses et commentaires de juristes haïtiens',
     items: [
       { id: 'd1', titre: 'Clean Code — Robert C. Martin — MSF', pages: 412, annee: '2023', gratuit: true, type: 'document' },
@@ -292,7 +292,7 @@ export default function PageBibliotheque() {
       )}
 
       {/* Hero */}
-      <section style={{ background: '#1A0000', padding: 'clamp(40px,6vw,80px) clamp(20px,5vw,48px)' }}>
+      <section style={{ background: `linear-gradient(135deg, #0D1B2A, ${PRIMAIRE})`, padding: 'clamp(40px,6vw,80px) clamp(20px,5vw,48px)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ width: 48, height: 2, background: OR, margin: '0 auto 20px' }} />
           <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(28px,4vw,52px)', color: 'white', margin: '0 0 14px', fontWeight: 'normal' }}>

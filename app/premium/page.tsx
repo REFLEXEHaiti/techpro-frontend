@@ -13,7 +13,7 @@ const BLEU = '#FF6B35';
 const TARIFS = [
   {
     id: 'GRATUIT', label: 'Gratuit', montantHTG: 0, recommande: false, icone: '💻',
-    avantages: ['3 formations IT gratuites', 'Protocoles de base (soins infirmiers)', 'Chatbot médical IA — 3 consultations/mois', 'Accès aux conférences publiques'],
+    avantages: ['3 formations IT gratuites', '3 formations IT gratuites', 'Assistant IA tech — 3 questions/mois', 'Accès aux webinaires publics'],
   },
   {
     id: 'PREMIUM', label: 'Développeur', montantHTG: 600, recommande: true, icone: '🖥️',
@@ -21,7 +21,7 @@ const TARIFS = [
   },
   {
     id: 'AVANCE', label: 'Expert', montantHTG: 900, recommande: false, icone: '🏆',
-    avantages: ['Tout du plan Développeur', 'Protocoles de spécialités médicales', 'Formation continue reconnue', 'Support prioritaire 24h', 'Accès aux revues médicales internationales'],
+    avantages: ['Tout du plan Développeur', 'Protocoles de spécialités médicales', 'Formation continue reconnue', 'Support prioritaire 24h', 'Accès aux articles et blogs tech'],
   },
   {
     id: 'INSTITUTION', label: 'Entreprise', montantHTG: 1400, recommande: false, icone: '🏢',

@@ -22,11 +22,11 @@ const getEmbedUrl = (url: string) => {
 };
 
 const LIVES_DEMO = [
-  { id: 'L1', titre: 'Protocole de prise en charge du paludisme grave en Haïti', description: 'Jean-Pierre Moreau présente les dernières recommandations OMS adaptées au contexte haïtien.', categorie: 'Intelligence Artificielle', statut: 'TERMINE', vues: 1840, dateDebut: '2026-03-05', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', videoUrl: '' },
-  { id: 'L2', titre: 'Simulation : accouchement dystocique — gestes d\'urgence', description: 'Formation pratique sur la gestion des complications obstétricales en milieu rural haïtien.', categorie: 'Data Science', statut: 'TERMINE', vues: 1230, dateDebut: '2026-03-18', youtubeUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U', videoUrl: '' },
-  { id: 'L3', titre: 'Réanimation pédiatrique — challenges techniques commentés', description: 'Analyse de cas réels de réanimation néonatale et pédiatrique dans les hôpitaux haïtiens.', categorie: 'DevOps', statut: 'TERMINE', vues: 980, dateDebut: '2026-02-28', youtubeUrl: 'https://www.youtube.com/watch?v=L_jWHffIx5E', videoUrl: '' },
-  { id: 'L4', titre: 'Cholestérol, HTA et diabète en Haïti — épidémiologie et prise en charge', description: 'Conférence sur les maladies chroniques non transmissibles, première cause de mortalité en Haïti.', categorie: 'Réseaux & Systèmes', statut: 'TERMINE', vues: 2100, dateDebut: '2026-02-14', youtubeUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', videoUrl: '' },
-  { id: 'L5', titre: 'Symposium national des infirmiers haïtiens 2026', description: 'Conférence annuelle — Développement Web avancés, nouvelles pratiques et formation continue.', categorie: 'Développement Web', statut: 'PROGRAMME', vues: 0, dateDebut: '2026-06-15', youtubeUrl: '', videoUrl: '' },
+  { id: 'L1', titre: 'Masterclass React 18 — Server Components & Suspense', description: 'Les nouvelles fonctionnalités React 18 : Server Components, Concurrent Mode et Suspense expliqués.', categorie: 'Développement Web', statut: 'TERMINE', vues: 1840, dateDebut: '2026-03-05', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', videoUrl: '' },
+  { id: 'L2', titre: 'Cybersécurité en Haïti — Protégez votre infrastructure', description: 'Sécuriser les réseaux et applications dans le contexte haïtien : menaces locales et solutions.', categorie: 'Cybersécurité', statut: 'TERMINE', vues: 1230, dateDebut: '2026-03-18', youtubeUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U', videoUrl: '' },
+  { id: 'L3', titre: 'Réanimation pédiatrique — challenges techniques commentés', description: 'Pandas, NumPy, Matplotlib et Scikit-learn appliqués aux données haïtiennes réelles.', categorie: 'DevOps', statut: 'TERMINE', vues: 980, dateDebut: '2026-02-28', youtubeUrl: 'https://www.youtube.com/watch?v=L_jWHffIx5E', videoUrl: '' },
+  { id: 'L4', titre: 'AWS Cloud Practitioner — Certifiez-vous en 30 jours', description: 'Préparation à la certification AWS Cloud Practitioner — services essentiels et architecture cloud.', categorie: 'Réseaux & Systèmes', statut: 'TERMINE', vues: 2100, dateDebut: '2026-02-14', youtubeUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', videoUrl: '' },
+  { id: 'L5', titre: 'TechPro Hackathon 2026 — Développez pour Haïti', description: 'Hackathon national — 48h pour construire des solutions tech aux problèmes haïtiens.', categorie: 'Intelligence Artificielle', statut: 'PROGRAMME', vues: 0, dateDebut: '2026-06-15', youtubeUrl: '', videoUrl: '' },
 ];
 
 const CATS = ['Tous', 'Développement Web', 'Intelligence Artificielle', 'Data Science', 'DevOps', 'Réseaux & Systèmes', 'Cloud Computing', 'Développement Mobile'];
@@ -35,7 +35,7 @@ const CAT_COLORS: Record<string, string> = {
   'DevOps': '#FF6B35', 'Réseaux & Systèmes': '#7C3AED', 'Cloud Computing': '#DC2626', 'Développement Mobile': '#7C2D12',
 };
 
-const FORM_VIDE = { titre: '', description: '', categorie: 'Développement Web', statut: 'PROGRAMME', dateDebut: '', type: 'LIVE' as 'LIVE' | 'UPLOAD', youtubeUrl: '', videoUrl: '' };
+const FORM_VIDE = { titre: '', description: '', categorie: 'Intelligence Artificielle', statut: 'PROGRAMME', dateDebut: '', type: 'LIVE' as 'LIVE' | 'UPLOAD', youtubeUrl: '', videoUrl: '' };
 
 export default function PageLives() {
   const { utilisateur } = useAuthStore();
@@ -135,7 +135,7 @@ export default function PageLives() {
             <div style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: secondaire, fontWeight: 700, marginBottom: 14 }}>Webinaires Tech & Projets IA</div>
             <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 10px', fontWeight: 'normal' }}>MediForm — En direct & Replays</h1>
             <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.7)', maxWidth: 520, margin: 0, lineHeight: 1.7 }}>
-              Webinaires Tech, simulations cliniques, hackathons et replays des formations en santé.
+              Webinaires tech, masterclasses, hackathons et replays des formations IT en direct.
             </p>
           </div>
           {estAdmin && <button onClick={() => ouvrir()} style={{ padding: '13px 24px', background: secondaire, color: 'white', border: 'none', borderRadius: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif", fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>+ Ajouter un live</button>}
@@ -191,7 +191,7 @@ export default function PageLives() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 22, color: '#0D1B2A', margin: '0 0 20px' }}>Replays & Archives médicales</h2>
+        <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 22, color: '#0D1B2A', margin: '0 0 20px' }}>Replays & Archives Tech</h2>
 
         {archives.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '48px 0', color: '#475569' }}><div style={{ fontSize: 40, marginBottom: 12 }}>🖥️</div><p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 14 }}>Aucun replay dans cette catégorie.</p></div>
@@ -244,7 +244,7 @@ export default function PageLives() {
               <button onClick={() => setModalForm(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 20, color: '#64748B' }}>✕</button>
             </div>
             <form onSubmit={sauvegarder} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-              <div><label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Titre *</label><input value={form.titre} required onChange={e => setForm((p: any) => ({ ...p, titre: e.target.value }))} placeholder="Ex : Symposium national des infirmiers 2026" style={inp} /></div>
+              <div><label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Titre *</label><input value={form.titre} required onChange={e => setForm((p: any) => ({ ...p, titre: e.target.value }))} placeholder="Ex : Masterclass JavaScript avancé 2026" style={inp} /></div>
               <div><label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Description</label><textarea value={form.description} onChange={e => setForm((p: any) => ({ ...p, description: e.target.value }))} rows={3} style={{ ...inp, resize: 'vertical' }} /></div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 <div><label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Catégorie</label>

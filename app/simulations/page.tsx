@@ -1,6 +1,6 @@
 // app/simulations/page.tsx — TechPro Haiti
 // ⚠️ EXCLUSIF À MEDIFORM HAITI — module unique, absent de LexHaiti et TechPro
-// Projets IA générées par l'IA médicale
+// Projets IA générés par l'IA — TechPro Haiti
 
 'use client';
 
@@ -13,11 +13,11 @@ const VERT = '#1B3A6B';
 const BLEU = '#FF6B35';
 
 const CAS_TYPES = [
-  { id: 'urgence',    label: 'Cloud Computing médicales',     description: 'Traumatismes, arrêt cardiaque, choc anaphylactique, AVC…',         icone: '🚨', couleur: '#DC2626' },
+  { id: 'web',        label: 'Développement Web',              description: 'Créez des applications web complètes avec React, Node.js et des APIs REST.',  icone: '🌐', couleur: '#1B3A6B' },
   { id: 'maternite',  label: 'Maternité & Data Science', description: 'Accouchements, complications, hémorragie post-partum, prééclampsie…', icone: '👶', couleur: BLEU },
   { id: 'pediatrie',  label: 'DevOps',               description: 'Diarrhée sévère, malnutrition, paludisme chez l\'enfant, infections…', icone: '💻', couleur: '#9B59B6' },
   { id: 'chronique',  label: 'Maladies chroniques',     description: 'Diabète, hypertension, tuberculose, VIH/SIDA, insuffisance rénale…',  icone: '❤️', couleur: VERT },
-  { id: 'tropicale',  label: 'Maladies tropicales',     description: 'Choléra, paludisme, dengue, leptospirose, chikungunya…',            icone: '🌡️', couleur: '#E67E22' },
+  { id: 'cyber',      label: 'Cybersécurité',           description: 'Pentest, audit de sécurité, CTF et défense des systèmes haïtiens.',       icone: '🔒', couleur: '#DC2626' },
   { id: 'psychiatrie',label: 'Santé mentale',           description: 'Dépression, PTSD post-catastrophe, psychose, gestion de crise…',    icone: '🧠', couleur: '#1ABC9C' },
 ];
 
@@ -48,7 +48,7 @@ function ContenuSimulations() {
 
   const lancerSimulation = async () => {
     if (!description.trim() || !typePatient.trim()) {
-      setErreur('Veuillez décrire le patient et la situation clinique.');
+      setErreur('Veuillez décrire votre projet et les technologies souhaitées.');
       return;
     }
     setErreur('');
@@ -56,7 +56,7 @@ function ContenuSimulations() {
     setResultat(null);
 
     try {
-      const { data } = await api.post('/ia/simulation-clinique', {
+      const { data } = await api.post('/ia/projet-technique', {
         description,
         contexte: {
           typePatient,
@@ -87,17 +87,17 @@ function ContenuSimulations() {
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.15)', color: 'white', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100, marginBottom: 16 }}>
-            Simulation clinique — IA médicale
+            Générateur de Projets IA — TechPro
           </div>
           <h1 style={{ fontSize: 'clamp(28px,4vw,48px)', color: 'white', marginBottom: 14, fontWeight: 800 }}>
             Pratiquez sur des cas patients
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
-            L'IA génère une évaluation pédagogique, les étapes de soins recommandées et les protocoles MSPP/OMS à référencer. Usage éducatif uniquement.
+            L'IA génère un projet complet avec architecture, stack technique recommandé, étapes de développement et ressources. Usage éducatif.
           </p>
           <div style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 100, padding: '8px 16px' }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ADE80' }} />
-            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.85)' }}>Ne remplace pas une supervision médicale réelle</span>
+            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.85)' }}>Ne remplace pas l'accompagnement d'un instructeur</span>
           </div>
         </div>
       </section>

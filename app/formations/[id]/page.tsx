@@ -20,14 +20,14 @@ const NIV: Record<string, { bg: string; text: string; label: string }> = {
 };
 
 const FORMATION_DEMO = {
-  id: 'demo', titre: 'Développement Web fondamentaux', description: 'Les bases des soins infirmiers : hygiène, administration des médicaments, surveillance des standards de code.',
+  id: 'demo', titre: 'Développement Web Full Stack', description: 'HTML, CSS, JavaScript, React et Node.js — construisez des applications web complètes.',
   niveau: 'DEBUTANT', categorie: 'Développement Web', publie: true, gratuit: true,
   lecons: [
-    { id: 'l1', titre: 'Hygiène des mains et asepsie', dureeMin: 20, quiz: true, quizNbQuestions: 5 },
+    { id: 'l1', titre: 'Introduction à HTML5 & CSS3', dureeMin: 20, quiz: true, quizNbQuestions: 5 },
     { id: 'l2', titre: 'Surveillance des standards de code', dureeMin: 30, quiz: true, quizNbQuestions: 8 },
-    { id: 'l3', titre: 'Administration des médicaments', dureeMin: 25, quiz: true, quizNbQuestions: 6 },
-    { id: 'l4', titre: 'Soins des plaies et pansements', dureeMin: 35, quiz: false },
-    { id: 'l5', titre: 'Prévention des infections nosocomiales', dureeMin: 20, quiz: false },
+    { id: 'l3', titre: 'React — Composants & Hooks', dureeMin: 25, quiz: true, quizNbQuestions: 6 },
+    { id: 'l4', titre: 'Node.js & API REST', dureeMin: 35, quiz: false },
+    { id: 'l5', titre: 'Déploiement & DevOps basique', dureeMin: 20, quiz: false },
   ],
   examens: [
     { id: 'ex1', titre: 'Quiz de mi-parcours — Leçons 1-3', type: 'QUIZ_IA', nbQuestions: 15, dureeMin: 20, apresLecon: 3, statut: 'DISPONIBLE' },
@@ -53,10 +53,10 @@ interface QuizEmbed {
 // ── Mini Quiz inline ─────────────────────────────────────────────
 function MiniQuiz({ quiz, onTerminer }: { quiz: QuizEmbed; onTerminer: (score: number) => void }) {
   const QUESTIONS_DEMO = [
-    { id: 'q1', texte: 'Quelle est la technique correcte pour se laver les mains selon l\'OMS ?', options: ['Savon et eau, 15 secondes', 'Savon et eau, 40-60 secondes', 'Gel hydroalcoolique uniquement', 'Eau seule, 30 secondes'], bonneReponse: 1, explication: 'Selon l\'OMS, le lavage des mains au savon doit durer 40 à 60 secondes pour être efficace, en couvrant toutes les zones (paumes, dos, entre les doigts, poignets).' },
-    { id: 'q2', texte: 'Quelle est la fréquence respiratoire normale chez un adulte ?', options: ['8-12 cycles/min', '12-20 cycles/min', '20-30 cycles/min', '30-40 cycles/min'], bonneReponse: 1, explication: 'La fréquence respiratoire normale chez un adulte au repos est de 12 à 20 cycles par minute. En dehors de cette plage, on parle de bradypnée (<12) ou tachypnée (>20).' },
-    { id: 'q3', texte: 'Avant d\'administrer un médicament, combien de "bons" doit-on vérifier ?', options: ['3', '5', '7', '10'], bonneReponse: 2, explication: 'La règle des 7 "bons" en pharmacologie infirmière : bon médicament, bonne dose, bon patient, bonne voie, bon moment, bonne documentation, bon effet attendu.' },
-    { id: 'q4', texte: 'Quelle est la glycémie capillaire à jeun normale ?', options: ['0.5-0.7 g/L', '0.7-1.1 g/L', '1.2-1.5 g/L', '1.5-2 g/L'], bonneReponse: 1, explication: 'La glycémie normale à jeun est entre 0.7 et 1.1 g/L (70-110 mg/dL). En dessous de 0.7 g/L on parle d\'hypoglycémie, au-dessus de 1.26 g/L à 2 reprises on parle de diabète.' },
+    { id: 'q1', texte: 'Quel est le résultat de `typeof null` en JavaScript ?', options: ['undefined', 'null', 'object', 'string'], bonneReponse: 1, explication: 'En JavaScript, `typeof null` retourne \'object\' — c\'est un bug historique du langage conservé pour la compatibilité. null n\'est pas un objet, mais un type primitif.' },
+    { id: 'q2', texte: 'Quelle balise HTML5 est sémantiquement correcte pour la navigation ?', options: ['<div class="nav">', '<navigation>', '<nav>', '<menu>'], bonneReponse: 1, explication: 'La fréquence respiratoire normale chez un adulte au repos est de 12 à 20 cycles par minute. En dehors de cette plage, on parle de bradypnée (<12) ou tachypnée (>20).' },
+    { id: 'q3', texte: 'Avant d\'administrer un médicament, combien de "bons" doit-on vérifier ?', options: ['array.merge()', 'array.concat()', 'array.join()', 'array.combine()'], bonneReponse: 2, explication: 'La règle des 7 "bons" en pharmacologie infirmière : bon médicament, bonne dose, bon patient, bonne voie, bon moment, bonne documentation, bon effet attendu.' },
+    { id: 'q4', texte: 'Qu'est-ce que le DOM en JavaScript ?', options: ['Data Object Model', 'Document Object Model', 'Dynamic Object Manager', 'Design Object Method'], bonneReponse: 1, explication: 'La glycémie normale à jeun est entre 0.7 et 1.1 g/L (70-110 mg/dL). En dessous de 0.7 g/L on parle d\'hypoglycémie, au-dessus de 1.26 g/L à 2 reprises on parle de diabète.' },
     { id: 'q5', texte: 'Quelle position adopter pour un patient inconscient qui respire ?', options: ['Position assise', 'Position latérale de sécurité (PLS)', 'Décubitus dorsal', 'Position de Trendelenburg'], bonneReponse: 1, explication: 'La Position Latérale de Sécurité (PLS) est indiquée pour un patient inconscient qui respire. Elle évite l\'inhalation de vomissements et maintient les voies aériennes dégagées.' },
   ];
 
@@ -310,7 +310,7 @@ export default function PageFormationDetail() {
               {/* Objectifs */}
               <div style={{ background: 'white', border: '1px solid #CBD5E1', borderRadius: 12, padding: '20px 24px', marginBottom: 20 }}>
                 <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 18, fontWeight: 'normal', color: '#0D1B2A', margin: '0 0 14px' }}>Ce que vous apprendrez</h2>
-                {['Maîtriser les gestes infirmiers fondamentaux', 'Surveiller et interpréter les standards de code', 'Administrer les médicaments en sécurité', 'Prévenir les infections en milieu de soins'].map((item, i) => (
+                {['Maîtriser HTML5, CSS3 et JavaScript moderne', 'Créer des interfaces React professionnelles', 'Construire des API REST avec Node.js', 'Déployer des applications sur le cloud'].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 10 }}>
                     <span style={{ color: primaire, fontWeight: 700, flexShrink: 0 }}>✓</span>
                     <span style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#374151' }}>{item}</span>
@@ -392,7 +392,7 @@ export default function PageFormationDetail() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <div style={{ background: 'white', border: '1px solid #CBD5E1', borderRadius: 12, padding: '18px' }}>
                 <h3 style={{ fontFamily: 'Georgia,serif', fontSize: 15, fontWeight: 'normal', color: '#0D1B2A', margin: '0 0 12px' }}>Inclus dans la formation</h3>
-                {['✓ Accès à vie', '✓ Certificat numérique MSP', '✓ Quiz IA après chaque leçon', '✓ Examen final planifié'].map((c, i) => (
+                {['✓ Accès à vie', '✓ Certificat TechPro reconnu', '✓ Quiz IA après chaque leçon', '✓ Projet final évalué'].map((c, i) => (
                   <div key={i} style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 8 }}>
                     <span style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#374151' }}>{c}</span>
                   </div>
