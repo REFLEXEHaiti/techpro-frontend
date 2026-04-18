@@ -79,7 +79,15 @@ export default function PageFormations() {
   const imgRef   = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    api.get('/cours').then(({data}) => { if(Array.isArray(data) && data.length) setFormations(data); }).catch(()=>{});
+    api.get('/cours').then(({data}) => {
+    if(Array.isArray(data) && data.length) {
+      setFormations(prev => {
+        // Merge: keep local_ items not yet synced, add real items
+        const localItems = prev.filter(f => f.id?.startsWith('local_'));
+        return [...localItems, ...data];
+      });
+    }
+  }).catch(()=>{});
   }, []);
 
   const filtrees = formations.filter(f => {
@@ -110,14 +118,25 @@ export default function PageFormations() {
         toast.success('Formation mise à jour !');
       } else {
         const {data} = await api.post('/cours', payload);
-        setFormations(prev => [{...payload, id:data.id||'local_'+Date.now(), _count:{lecons:0,inscriptions:0}}, ...prev]);
-        toast.success('Formation créée !');
+        const newId = data?.id || data?.cours?.id;
+        const nouvelleFormation = {...payload, id: newId || ('local_'+Date.now()), _count:{lecons:0,inscriptions:0}};
+        setFormations(prev => [nouvelleFormation, ...prev.filter(f => !f.id?.startsWith('local_'))]);
+        // Recharge depuis l'API après 1s pour avoir les vrais IDs
+        setTimeout(() => {
+          api.get('/cours').then(({data: d}) => { if(Array.isArray(d) && d.length) setFormations(d); }).catch(()=>{});
+        }, 1500);
+        toast.success('Formation créée ! ✅');
       }
       setModal(false);
     } catch {
-      if(!editing) setFormations(prev => [{...form, id:'local_'+Date.now(), _count:{lecons:0,inscriptions:0},...(videoFile?{videoUrl:URL.createObjectURL(videoFile)}:{})}, ...prev]);
-      else setFormations(prev => prev.map(f => f.id===editing.id ? {...f,...form} : f));
-      toast.success(editing ? 'Formation mise à jour !' : 'Formation créée !');
+      if(!editing) {
+        const tempId = 'local_'+Date.now();
+        setFormations(prev => [{...form, id: tempId, _count:{lecons:0,inscriptions:0}}, ...prev]);
+        toast.success('Formation créée (mode hors-ligne) !');
+      } else {
+        setFormations(prev => prev.map(f => f.id===editing.id ? {...f,...form} : f));
+        toast.success('Formation mise à jour !');
+      }
       setModal(false);
     }
     setEnvoi(false);
@@ -315,7 +334,7 @@ export default function PageFormations() {
                     <span>📚 {f._count?.lecons ?? 0} leçons</span>
                     <span>👥 {f._count?.inscriptions ?? f.inscrits ?? 0} inscrits</span>
                   </div>
-                  <Link href={f.id?.startsWith('d') ? '#' : `/formations/${f.id}`} style={{display:'block',textAlign:'center',padding:'11px',background:primaire,color:'white',borderRadius:8,textDecoration:'none',fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:700,fontSize:13}}>
+                  <Link href={(!f.id || f.id.startsWith('demo-') || f.id.startsWith('d1') || f.id.startsWith('d2') || f.id.startsWith('d3') || f.id.startsWith('d4') || f.id.startsWith('d5') || f.id.startsWith('d6')) ? '#' : `/formations/${f.id}`} style={{display:'block',textAlign:'center',padding:'11px',background:primaire,color:'white',borderRadius:8,textDecoration:'none',fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:700,fontSize:13}}>
                     {f.gratuit !== false ? 'Commencer gratuitement →' : 'Voir la formation →'}
                   </Link>
                 </div>

@@ -521,7 +521,14 @@ export default function PageQuiz() {
 
   useEffect(() => {
     api.get('/quiz').then(({ data }) => { if (Array.isArray(data) && data.length) setQuizList(data); }).catch(() => {});
-    api.get('/examens').then(({ data }) => { if (Array.isArray(data) && data.length) setExamens(data); }).catch(() => {});
+    api.get('/examens').then(({ data }) => {
+    if (Array.isArray(data) && data.length) {
+      setExamens(prev => {
+        const locals = prev.filter(e => e.id?.startsWith('local_'));
+        return [...locals, ...data];
+      });
+    }
+  }).catch(() => {});
   }, []);
 
   const lancerQuiz = (q: ExamenConfig) => {
