@@ -29,7 +29,7 @@ export default function PageClassement() {
     <div style={{ background: '#F8FAFB', minHeight: '100vh' }}>
       {/* Hero */}
       <section style={{ background: `linear-gradient(135deg, ${VERT} 0%, #0D4D2E 100%)`, padding: 'clamp(40px,5vw,64px) clamp(20px,5vw,48px)', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: 'clamp(28px,4vw,44px)', color: 'white', fontWeight: 800, marginBottom: 12 }}>Classement MediForm</h1>
+        <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: 'clamp(28px,4vw,44px)', color: 'white', fontWeight: 800, marginBottom: 12 }}>Classement TechPro Haiti</h1>
         <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.75)', maxWidth: 400, margin: '0 auto' }}>
           Les développeurs & techniciens les plus engagés dans leur formation continue.
         </p>

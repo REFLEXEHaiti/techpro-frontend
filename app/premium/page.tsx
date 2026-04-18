@@ -21,11 +21,11 @@ const TARIFS = [
   },
   {
     id: 'AVANCE', label: 'Expert', montantHTG: 900, recommande: false, icone: '🏆',
-    avantages: ['Tout du plan Développeur', 'Protocoles de spécialités médicales', 'Formation continue reconnue', 'Support prioritaire 24h', 'Accès aux articles et blogs tech'],
+    avantages: ['Tout du plan Développeur', 'Toutes les ressources avancées', 'Formation continue reconnue', 'Support prioritaire 24h', 'Accès aux articles et blogs tech'],
   },
   {
     id: 'INSTITUTION', label: 'Entreprise', montantHTG: 1400, recommande: false, icone: '🏢',
-    avantages: ['Tout du plan Spécialiste', "Jusqu'à 50 développeurs & techniciens", 'Tableau de bord institutionnel', 'Certification officielle Tech Haiti', 'API bibliothèque médicale'],
+    avantages: ['Tout du plan Spécialiste', "Jusqu'à 50 développeurs & techniciens", 'Tableau de bord institutionnel', 'Certification officielle Tech Haiti', 'API accès ressources complètes'],
   },
 ];
 
@@ -77,10 +77,10 @@ export default function PagePremium() {
           Abonnements TechPro Haiti
         </div>
         <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(26px,4vw,44px)', color: 'white', margin: '0 0 14px', fontWeight: 'normal' }}>
-          Investissez dans votre formation médicale
+          Investissez dans votre formation professionnelle
         </h1>
         <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.75)', maxWidth: 540, margin: '0 auto 24px', lineHeight: 1.7 }}>
-          Protocoles cliniques adaptés à Haïti, certifications MSP et outils IA pour les développeurs & techniciens.
+          Comptabilité, droit, IT, secrétariat — certifications reconnues et outils IA pour professionnels haïtiens.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           {['🖥️ Reconnu Tech Haiti', '🔒 Paiement sécurisé', '📜 Certificat numérique', '↩️ Annulation libre'].map(b => (

@@ -40,7 +40,7 @@ export default function Navbar() {
   const liensNav = [
     { label: 'Catalogue',      href: '/formations' },
     { label: 'Certifications', href: '/quiz' },
-    { label: 'Projets IA',     href: '/simulations' },
+    { label: 'Galerie',        href: '/simulations' },
     { label: 'Lives',          href: '/lives' },
     { label: 'Ressources',     href: '/bibliotheque' },
   ];

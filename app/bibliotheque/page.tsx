@@ -14,7 +14,7 @@ const OR       = '#FF6B35';
 const COLLECTIONS_BASE = [
   {
     id: 'codes', titre: 'Documentation Technique', icone: '🖥️', couleur: BORDEAUX,
-    description: 'Documentation de code adaptés au contexte haïtien et recommandations OMS',
+    description: 'Documentation de code adaptés au contexte haïtien et normes professionnelles haïtiennes',
     items: [
       { id: 'c1', titre: 'JavaScript — Le Guide Complet (MDN)', pages: 245, annee: '2024', gratuit: true, type: 'document' },
       { id: 'c2', titre: 'Python Documentation Officielle', pages: 312, annee: '2023', gratuit: true, type: 'document' },
@@ -447,7 +447,7 @@ export default function PageBibliotheque() {
                 <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 8, fontFamily: "'Helvetica Neue',Arial,sans-serif" }}>Type de contenu</label>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 14 }}>
                   {[
-                    { val: 'DOCUMENT', label: '📄 Document', desc: 'PDF, texte médical' },
+                    { val: 'DOCUMENT', label: '📄 Document / Cours', desc: 'PDF, cours, notes' },
                     { val: 'VIDEO', label: '🎬 Vidéo', desc: 'Cours, conférence' },
                   ].map(opt => (
                     <div key={opt.val} onClick={() => setForm((p: any) => ({ ...p, typeContenu: opt.val }))}

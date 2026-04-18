@@ -12,9 +12,9 @@ const VERT = '#1B3A6B';
 const BLEU = '#FF6B35';
 
 const MOCK: any[] = [
-  { id:'S1', nom:'MSPP Haïti',       typeContrat:'PLATINE', couleur:BLEU,    siteWeb:'https://mspp.gouv.ht',  actif:true, logoUrl:'' },
+  { id:'S1', nom:'Digicel Haiti',       typeContrat:'PLATINE', couleur:BLEU,    siteWeb:'https://www.digicelhaiti.com',  actif:true, logoUrl:'' },
   { id:'S2', nom:'OIIH',             typeContrat:'PLATINE', couleur:VERT,    siteWeb:'',                      actif:true, logoUrl:'' },
-  { id:'S3', nom:'OPS / OMS Haïti',  typeContrat:'OR',      couleur:'#E67E22',siteWeb:'https://www.paho.org',  actif:true, logoUrl:'' },
+  { id:'S3', nom:'BRH Haiti',  typeContrat:'OR',      couleur:'#E67E22',siteWeb:'https://www.brh.ht',  actif:true, logoUrl:'' },
   { id:'S4', nom:'Digicel Haiti',    typeContrat:'ARGENT',  couleur:'#FF6600',siteWeb:'https://digicelhaiti.com', actif:true, logoUrl:'' },
 ];
 
@@ -123,7 +123,7 @@ export default function PageSponsors() {
           Nos partenaires
         </h1>
         <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.75)', maxWidth: 500, margin: '0 auto 24px', lineHeight: 1.7 }}>
-          TechPro Haiti est soutenu par les institutions médicales et partenaires qui croient en la formation continue des développeurs & techniciens haïtiens.
+          TechPro Haiti est soutenu par les entreprises et institutions et partenaires qui croient en la formation continue des développeurs & techniciens haïtiens.
         </p>
         {estAdmin && (
           <button onClick={() => setModal(true)}
@@ -180,7 +180,7 @@ export default function PageSponsors() {
         {/* Devenir partenaire */}
         <div style={{ background: `linear-gradient(135deg, ${VERT}10, ${BLEU}08)`, border: `1px solid ${VERT}25`, borderRadius: 16, padding: '32px', textAlign: 'center' }}>
           <h3 style={{ fontFamily: "'Inter',sans-serif", fontSize: 22, fontWeight: 800, color: '#0D1F2D', marginBottom: 12 }}>
-            Devenir partenaire MediForm
+            Devenir partenaire TechPro
           </h3>
           <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 14, color: '#64748B', lineHeight: 1.7, maxWidth: 500, margin: '0 auto 20px' }}>
             Rejoignez les institutions qui soutiennent la formation continue des développeurs & techniciens haïtiens. Visibilité auprès de 2 800+ soignants.
@@ -218,7 +218,7 @@ export default function PageSponsors() {
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Inter',sans-serif" }}>Nom *</label>
-                <input type="text" value={form.nom} required onChange={e => setForm(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : MSPP Haïti" style={inp} onFocus={focus} onBlur={blur} />
+                <input type="text" value={form.nom} required onChange={e => setForm(p => ({ ...p, nom: e.target.value }))} placeholder="Ex : Digicel Haiti" style={inp} onFocus={focus} onBlur={blur} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6, fontFamily: "'Inter',sans-serif" }}>Site web</label>

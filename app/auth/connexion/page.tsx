@@ -80,20 +80,20 @@ export default function PageConnexion() {
       )}
 
       <div style={{ flex: 1, display: 'flex' }}>
-        {/* Panneau gauche — image médicale (desktop) */}
+        {/* Panneau gauche — image hero (desktop) */}
         <div style={{ flex: 1, background: `linear-gradient(135deg, #0D1B2A 0%, ${primaire} 100%)`, display: 'none', alignItems: 'center', justifyContent: 'center', padding: 48, position: 'relative', overflow: 'hidden' }}
           className="auth-panel-left">
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
           <div style={{ position: 'relative', textAlign: 'center', maxWidth: 380 }}>
             <div style={{ fontSize: 56, marginBottom: 20 }}>🖥️</div>
             <h2 style={{ fontFamily: 'Georgia,serif', fontSize: 28, color: 'white', margin: '0 0 16px', fontWeight: 'normal', lineHeight: 1.2 }}>
-              La formation médicale haïtienne au bout des doigts
+              La formation professionnelle haïtienne au bout des doigts
             </h2>
             <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, margin: '0 0 32px' }}>
-              Protocoles cliniques, simulations médicales et certifications reconnues par le Tech Haiti.
+              Bureautique, comptabilité, droit, secrétariat et IT — formations certifiantes pour professionnels haïtiens.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {['2 400+ professionnels inscrits', '62 modules de formation', 'Certifications Tech Haiti', 'Protocoles OMS adaptés'].map(item => (
+              {['3 200+ professionnels inscrits', '85 formations disponibles', 'Certifications Tech Haiti', 'Certifications reconnues'].map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: secondaire, flexShrink: 0 }} />
                   <span style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>{item}</span>
@@ -110,7 +110,7 @@ export default function PageConnexion() {
             <div style={{ textAlign: 'center', marginBottom: 32 }}>
               <div style={{ width: 60, height: 60, borderRadius: 16, background: `linear-gradient(135deg, #0D1B2A, ${primaire})`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px', color: 'white', fontFamily: 'Georgia,serif', fontWeight: 700, fontSize: 22 }}>TP</div>
               <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 24, fontWeight: 'normal', color: '#0D1B2A', margin: '0 0 6px' }}>TechPro Haiti</h1>
-              <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#475569', margin: 0 }}>Plateforme médicale & paramédicale haïtienne</p>
+              <p style={{ fontFamily: "'Helvetica Neue',Arial,sans-serif", fontSize: 13, color: '#475569', margin: 0 }}>Plateforme de formation professionnelle haïtienne</p>
             </div>
 
             {/* Carte formulaire */}
